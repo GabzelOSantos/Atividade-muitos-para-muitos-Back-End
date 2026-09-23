@@ -26,8 +26,6 @@ public class CursoService {
 
     // Método para criar o curso
     public String criarCurso(CursoDTO dto){
-        System.out.println("Nome recebido: " + dto.getNome());
-
         Curso c = new Curso();
 
         c.setNome(dto.getNome());
