@@ -94,10 +94,11 @@ public class AlunoService {
         * novos
         */
         if (req.getCurso_id() != null) {
+            a.getCursos().clear();
+
             for (Long cursoId : req.getCurso_id()) {
                 Curso curso = cursoRepository.findById(cursoId).orElseThrow();
 
-                a.getCursos().clear();
                 a.getCursos().add(curso);
             }
         }
